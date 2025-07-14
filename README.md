@@ -1,81 +1,85 @@
-# Fake-News-Detection  
-  
-**Project Overview**  
-  
-This project aims to build a machine learning model to classify news articles as fake or real. It utilizes several algorithms including Naive Bayes, Logistic Regression, Support Vector Machine, Random Forest, and Gradient Boosting.  
+# 📰 Fake News Detection
 
-  
-**Dataset**  
-  
-The dataset used for this project is fakenews.csv, which contains the following columns:   
-  
-  
-`text`: The body of the news article  
-`label`: The label indicating whether the news is fake (0) or real (1)  
-`fakenews.csv`: The dataset file.  
-`Fake_news_Pre.ipynb`: The Jupyter notebook containing the code for data analysis, visualization, and model training.  
+This project focuses on building machine learning models to detect **fake vs. real news articles** using NLP techniques and TF-IDF vectorization.
 
-**Key Steps**  
+---
 
-`Data Loading and Preprocessing`:
+## 📚 Table of Contents
 
-Load the dataset using pandas.  
-Remove duplicates based on the text column.  
+- [Project Overview](#project-overview)
+- [Dataset](#dataset)
+- [Key Steps](#key-steps)
+- [Results](#results)
+- [Conclusion](#conclusion)
 
-`Exploratory Data Analysis (EDA)`:  
+---
 
+## 📘 Project Overview
 
-Distribution of fake vs. real news using a count plot.  
-Text length analysis.  
-Word cloud visualizations for fake and real news headlines.
+This project classifies news articles as **fake (0)** or **real (1)** using several machine learning algorithms including:
 
-`Model Training and Evaluation`:  
-  
-Split the data into training and testing sets.  
-Use TF-IDF vectorization for text data.  
+- Naive Bayes  
+- Logistic Regression  
+- Support Vector Machine (SVM)  
+- Random Forest  
+- Gradient Boosting  
 
-`Train and evaluate the following models`:
-  
-Naive Bayes  
-Logistic Regression  
-Support Vector Machine  
-Random Forest  
-Gradient Boosting  
-  
-Compare models based on accuracy, precision, and recall.  
+TF-IDF vectorization is used to transform the text into numerical features for training.
 
-`Results`
-  
-Naive Bayes Model:  
-  
-- Accuracy: 76.11%
-- Precision: 74.60%
-- Recall: 53.71%
-  
-Logistic Regression Model:  
-  
-- Accuracy: 76.43%
-- Precision: 74.71%
-- Recall: 54.86%
-    
-Support Vector Machine Model:  
-  
-- Accuracy: 76.32%
-- Precision: 70.32%
-- Recall: 62.29%
-  
-Random Forest Model:  
-  
-- Accuracy: 77.91%
-- Precision: 78.54%
-- Recall: 55.43%
-  
-Gradient Boosting Model:  
-  
-- Accuracy: 75.69%
-- Precision: 75.00%
-- Recall: 51.43%
-  
-Conclusion  
+---
 
-The Random Forest model achieved the highest accuracy in detecting fake news, followed closely by Logistic Regression and Naive Bayes models.
+## 📂 Dataset
+
+- 📁 **fakenews.csv**  
+  - `text`: News article body  
+  - `label`: Binary classification (0 = fake, 1 = real)
+
+---
+
+## 🔑 Key Steps
+
+### 🧹 1. Data Preprocessing
+
+- Load dataset with `pandas`
+- Remove duplicates
+- Clean missing/null values
+
+### 📊 2. Exploratory Data Analysis (EDA)
+
+- Count plot of fake vs. real labels
+- Distribution of article lengths
+- WordClouds for fake and real articles
+
+### ✨ 3. Text Vectorization
+
+- Apply **TF-IDF** to convert text into vectors
+
+### 🧠 4. Model Training
+
+Trained and compared the following models:
+
+- Naive Bayes  
+- Logistic Regression  
+- Support Vector Machine (SVM)  
+- Random Forest  
+- Gradient Boosting  
+
+---
+
+## 📊 Results
+
+| Model                  | Accuracy | Precision | Recall   |
+|------------------------|----------|-----------|----------|
+| Naive Bayes            | 76.11%   | 74.60%    | 53.71%   |
+| Logistic Regression    | 76.43%   | 74.71%    | 54.86%   |
+| SVM                    | 76.32%   | 70.32%    | 62.29%   |
+| ✅ Random Forest        | **77.91%** | **78.54%** | **55.43%** |
+| Gradient Boosting      | 75.69%   | 75.00%    | 51.43%   |
+
+---
+
+## 🏁 Conclusion
+
+- ✅ **Random Forest** achieved the highest accuracy and precision, making it the best-performing model.
+- Logistic Regression and Naive Bayes also performed competitively.
+- SVM showed the best balance of **precision and recall**, especially for real news detection.
